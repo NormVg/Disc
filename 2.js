@@ -1,5 +1,6 @@
 
 const nav_bar_set = `
+<a onclick="NavBar('NowPlaylist')" ><img class="nav-icon" src="img/nowplaylist.png" alt=""></a>
 <a onclick="NavBar('Folder')" ><img class="nav-icon" src="img/folder.png" alt=""></a>
 <a onclick="NavBar('Music')" ><img class="nav-icon" src="img/music.png" alt=""></a>
 <a onclick="NavBar('Playlist')" ><img class="nav-icon" src="img/playlist.png" alt=""></a>
@@ -82,7 +83,7 @@ function NavBar(type){
         FullPlayer("off")
         nav.className = "nav-bar-on"
         nav.innerHTML = FullNav("img/nowplaylist.png")
-        SetFolder()
+        
         return 
     }
 
