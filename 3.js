@@ -74,17 +74,21 @@ function SetPlayerAudio(id){
             document.getElementById("music").src = "https://normvgmusic.pythonanywhere.com/api/audio?id="+id
             
 
+            
             document.getElementById("music").onloadstart = function (){
               barNow.style.width = "0%"
               playmusic()
               document.getElementById("play-full").innerText = "00:00"
               document.getElementById("play").disabled = true
+              document.getElementById("play-ico").src = "img/system-solid-720-spinner-half-circles.gif"
+              document.getElementById("play-ico").style.borderRadius = "100%"
             }
 
             document.getElementById("music").oncanplay = function (){
               document.getElementById("play").className = "off"
               document.getElementById("play").disabled = false
               playmusic()
+              document.getElementById("play-ico").style.borderRadius = "0%"
             }
           });
           
